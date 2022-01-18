@@ -1,0 +1,21 @@
+
+Here's your riddle:
+
+You are given a list of slash-separated file paths such:
+
+    ['dir1/file1.txt', 'file2.txt', 'dir1/file3.txt', 'dir2/file4.txt']
+
+How do you convert this file path list into a nested list of ovjects ? The output
+should look something like this (example is in json, but can be any other dict/map/etc):
+
+[
+    {"name": "file2.txt", "children": []},
+    {"name": "dir1", "children": [
+        {"name": "file1.txt", "children": []},
+        {"name": "file3.txt", "children": []},
+    ]},
+    {"name": "dir2", "children": [
+        {"name": "file4.txt", "children": []},
+    ]},
+]
+
